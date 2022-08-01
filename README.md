@@ -13,7 +13,9 @@ The goal of isbn is to …
 You can install the development version of isbn like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+install.packages(
+   "isbn", 
+   repos = c(mm = "https://uribo.r-universe.dev", getOption("repos")))
 ```
 
 ## Example
