@@ -58,8 +58,8 @@ isbn_convert10to13 <- function(x, .prefix = "978") {
   x <-
     stringr::str_remove_all(x, "-")
   paste0(.prefix,
-         stringr::str_extract_all(x,
-                                  stringr::boundary("character"),
-                                  simplify = FALSE) |>
-           isbn_to_str_collapse())
+         isbn_to_str_collapse(
+           stringr::str_extract_all(x,
+                                    stringr::boundary("character"),
+                                    simplify = FALSE)))
 }
